@@ -87,3 +87,34 @@
   .nw-hero__actions{display:grid!important}
   .nw-btn{width:100%;justify-content:center}
 }
+
+/* Logos TF3Gest: uso consistente del logotipo completo */
+.nw-brand {
+  display:inline-flex!important;
+  align-items:center!important;
+  gap:0!important;
+  min-width:0!important;
+}
+.nw-brand .nw-brand__logo,
+.nw-brand > img {
+  display:block!important;
+  width:240px!important;
+  height:auto!important;
+  max-height:58px!important;
+  object-fit:contain!important;
+  object-position:left center!important;
+  border:0!important;
+  border-radius:0!important;
+  padding:0!important;
+  background:transparent!important;
+  box-shadow:none!important;
+}
+.nw-brand__copy { display:none!important; }
+@media(max-width:900px){
+  .nw-brand .nw-brand__logo,
+  .nw-brand > img { width:205px!important; max-height:50px!important; }
+}
+@media(max-width:680px){
+  .nw-brand .nw-brand__logo,
+  .nw-brand > img { width:172px!important; max-height:44px!important; }
+}

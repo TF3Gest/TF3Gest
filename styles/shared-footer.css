@@ -77,3 +77,25 @@
 @media(max-width:680px){
   .nw-footer__logo-image{width:190px}
 }
+
+/* Logotipo completo blanco en todos los pies de página oscuros */
+.nw-footer__logo{
+  display:inline-flex;
+  align-items:center;
+  gap:0;
+}
+.nw-footer__logo-image{
+  display:block;
+  width:220px;
+  height:auto;
+  max-height:58px;
+  object-fit:contain;
+  object-position:left center;
+}
+@media(max-width:680px){
+  .nw-footer__logo-image{
+    width:185px;
+    height:auto;
+    max-height:50px;
+  }
+}

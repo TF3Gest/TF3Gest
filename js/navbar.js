@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
   container.innerHTML = `
     <div class="nw-nav__inner">
       <a class="nw-brand" href="${homeHref('#hero-section')}" aria-label="TF3Gest, inicio">
-        <img src="images/tf3gest-logo.png?v=5" alt="TF3Gest" width="240" height="73">
+        <img class="nw-brand__logo" src="images/tf3gest-logo.png?v=20260828" alt="TF3Gest">
       </a>
       <button class="nw-menu-toggle" type="button" aria-expanded="false" aria-controls="nw-main-nav" aria-label="Abrir menú">
         <span></span><span></span><span></span>

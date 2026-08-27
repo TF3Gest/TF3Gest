@@ -30,3 +30,25 @@ button,input,textarea,select,optgroup,code,pre,kbd,samp{font-family:"Inter", -ap
 @media(max-width:600px){
   .legal-brand .legal-brand__logo{width:170px;height:auto}
 }
+
+/* Logotipo completo en cabeceras legales oscuras */
+.legal-brand{
+  display:inline-flex;
+  align-items:center;
+  gap:0;
+}
+.legal-brand .legal-brand__logo{
+  display:block;
+  width:215px;
+  height:auto;
+  max-height:54px;
+  object-fit:contain;
+  object-position:left center;
+}
+@media(max-width:600px){
+  .legal-brand .legal-brand__logo{
+    width:175px;
+    height:auto;
+    max-height:44px;
+  }
+}

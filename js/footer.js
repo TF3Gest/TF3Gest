@@ -8,7 +8,7 @@
     <div class="nw-footer__top">
       <div class="nw-footer__brand">
         <a class="nw-footer__logo" href="index.html#inicio" aria-label="Volver al inicio">
-          <img class="nw-footer__logo-image" src="images/tf3gest-logo-white.png?v=1" alt="TF3Gest" decoding="async">
+          <img class="nw-footer__logo-image" src="images/tf3gest-logo-white.png?v=20260828" alt="TF3Gest" decoding="async">
         </a>
         <p>Software de gestión y facturación para talleres.</p>
       </div>
