@@ -25,7 +25,7 @@
 /* Hero */
 .nw-hero{position:relative;overflow:hidden;padding-top:154px!important;padding-bottom:96px!important;background:linear-gradient(180deg,#fff 0%,#f7fbff 75%,#fff 100%)!important}
 .nw-hero::before{content:"";position:absolute;z-index:0;right:-320px;top:-360px;width:850px;height:850px;border-radius:50%;background:radial-gradient(circle,rgba(8,123,240,.18) 0%,rgba(8,123,240,.06) 40%,rgba(8,123,240,0) 72%);pointer-events:none}
-.nw-hero::after{content:"TF3";position:absolute;z-index:0;right:2vw;bottom:-90px;font-size:clamp(10rem,20vw,20rem);font-weight:900;font-style:italic;letter-spacing:-.1em;color:rgba(0,26,61,.025);pointer-events:none}
+.nw-hero::after{content:"TF3";position:absolute;z-index:0;right:2vw;bottom:-90px;font-size:clamp(10rem,20vw,20rem);font-weight:800;font-style:italic;letter-spacing:-.1em;color:rgba(0,26,61,.025);pointer-events:none}
 .nw-hero>.nw-shell{position:relative;z-index:1}
 .nw-hero__grid{grid-template-columns:minmax(0,1.04fr) minmax(470px,.96fr)!important;gap:72px!important;align-items:center}
 .nw-kicker{padding:9px 14px!important;border:1px solid #cde5ff!important;border-radius:999px!important;background:#eef7ff!important;color:#0866c8!important;font-weight:800!important}

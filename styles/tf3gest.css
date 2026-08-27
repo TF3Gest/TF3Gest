@@ -6,23 +6,6 @@
 ***********/
 
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800');
-@font-face
-{
-	font-family: 'Lucida';
-	src: url('../fonts/lucida_bright_regular.ttf')  format('truetype');
-}
-@font-face
-{
-	font-family: 'Lucida';
-	src: url('../fonts/lucida_bright_demi.ttf')  format('truetype');
-	font-weight: 700;
-}
-@font-face
-{
-	font-family: 'Beyond';
-	src: url('../fonts/beyond_the_mountains.otf')  format('opentype'),
-		 url('../fonts/beyond_the_mountains.ttf')  format('truetype');
-}
 /*********************************
 2. Body and some general stuff
 *********************************/
@@ -37,7 +20,7 @@
 }
 body
 {
-	font-family: 'Optima';
+	font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 	font-size: 14px;
 	font-weight: 400;
 	background: #FFFFFF;
@@ -58,7 +41,7 @@ ul
 }
 p
 {
-	font-family: 'Optima';
+	font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 	font-size: 14px;
 	line-height: 2;
 	font-weight: 400;
@@ -115,7 +98,7 @@ h4{font-size: 18px;}
 h5{font-size: 14px;}
 h1, h2, h3, h4, h5, h6
 {
-	font-family: 'Optima';
+	font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-webkit-text-shadow: rgba(0,0,0,.01) 0 0 1px;
 	text-shadow: rgba(0,0,0,.01) 0 0 1px;
@@ -236,7 +219,7 @@ section
 }
 .section_title
 {
-	font-family: 'Optima';
+	font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 	font-size: 60px;
 	text-transform: uppercase;
 	color: #2f2f2f;
@@ -306,7 +289,7 @@ section
 }
 .home_title
 {
-	font-family: 'Optima';
+	font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 	font-size: 36px;
 	color: #FFFFFF;
 	line-height: 0.75;
@@ -319,13 +302,13 @@ section
 {
 	display: inline-block;
 	position: relative;
-	font-family: 'Optima';
+	font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 	font-size: 16px;
 	color: #FFFFFF;
 }
 .breadcrumbs ul li a
 {
-	font-family: 'Optima';
+	font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 	font-size: 16px;
 	color: #FFFFFF;
 	-webkit-transition: all 200ms ease;
@@ -362,7 +345,7 @@ section
 }
 .current_page
 {
-	font-family: 'Optima';
+	font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 	font-size: 16px;
 	color: #232323;
 }
