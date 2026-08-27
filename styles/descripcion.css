@@ -1,0 +1,180 @@
+/* Estilos generales */
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+    background: #FFFFFF;
+    color: #2f2f2f;
+}
+
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: #2f2f2f;
+}
+
+h1 {
+    font-size: 22px; /* Tamaño ajustado */
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 20px; /* Tamaño ajustado */
+    margin-bottom: 15px;
+}
+
+h3 {
+    font-size: 18px; /* Tamaño ajustado */
+    margin-bottom: 10px;
+}
+
+.section {
+    padding-top: 30px; /* Espaciado superior ajustado */
+    margin-bottom: 30px; /* Espaciado inferior para separar secciones */
+}
+
+.highlight {
+  margin-top: 20px;
+
+    background: #f0f0f0; /* Fondo gris claro para destacar secciones */
+    border-radius: 8px; /* Bordes redondeados */
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.highlight ul {
+    padding-left: 20px; /* Espaciado interno para la lista */
+}
+
+.highlight li {
+    margin-bottom: 10px; /* Espacio entre elementos de la lista */
+}
+
+.button, .cta-button {
+    font-size: 14px; /* Tamaño de fuente más grande para los botones */
+    background: #937c6f; /* Color de fondo del botón */
+    color: #FFFFFF; /* Color del texto del botón */
+    border: none;
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 10px 20px; /* Relleno ajustado */
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px; /* Espacio superior para el botón */
+}
+
+.button:hover, .cta-button:hover {
+    background: #7a5d46; /* Color más oscuro al pasar el ratón */
+}
+
+.product_content {
+    margin-top: 30px;
+}
+
+.review_form_input, .review_form_text {
+    font-size: 14px; /* Tamaño de fuente ajustado para formularios */
+    border: 1px solid #b5b5b5;
+    border-radius: 4px; /* Bordes redondeados */
+    padding: 10px;
+    margin-bottom: 10px; /* Espacio entre campos de formulario */
+}
+
+.review_form_button {
+    font-size: 14px; /* Tamaño de fuente ajustado para el botón del formulario */
+    background: #5D6064;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    text-align: center;
+    display: inline-block;
+}
+
+.review_form_button:hover {
+    background: #4a4d51; /* Color más oscuro al pasar el ratón */
+}
+/* Estilos generales para las secciones */
+.section, .highlight {
+    background: #f9f9f9; /* Fondo blanco roto para una apariencia suave */
+    border-radius: 8px; /* Bordes redondeados */
+    padding: 15px; /* Ajuste del espaciado interno */
+    margin-bottom: 20px; /* Espacio debajo de cada sección */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Sombra ligera para destacar las secciones */
+}
+
+.section h2, .highlight h2 {
+    font-size: 18px; /* Tamaño ajustado para los encabezados */
+    margin-bottom: 10px; /* Espacio debajo del encabezado */
+}
+
+.section h3 {
+    font-size: 16px; /* Tamaño ajustado para subencabezados */
+    margin-bottom: 8px; /* Espacio debajo del subencabezado */
+}
+
+.section p {
+    margin-bottom: 10px; /* Espacio debajo de los párrafos */
+}
+
+.section ul {
+    padding-left: 15px; /* Espaciado interno para listas */
+}
+
+.section li {
+    margin-bottom: 8px; /* Espacio entre elementos de la lista */
+}
+
+
+/* Estilo para la llamada a la acción */
+.section.cta {
+    background: transparent; /* Sin fondo adicional para que no se vea como un cuadrado */
+    padding: 0; /* Sin padding extra */
+    margin-bottom: 20px; /* Espacio debajo de la sección */
+}
+.cta-button {
+    display: inline-block; /* Mostrar el botón en línea con el texto */
+    font-size: 12px; /* Tamaño de fuente igual al de los botones existentes */
+    padding: 10px 20px; /* Espaciado interno del botón (vertical y horizontal) */
+    background: #937c6f; /* Color de fondo igual al de los otros botones */
+    color: #ffffff; /* Color de texto igual al de los otros botones */
+    text-align: center; /* Centrar el texto dentro del botón */
+    text-decoration: none; /* Sin subrayado en el enlace */
+    border-radius: 4px; /* Bordes redondeados */
+    transition: background 0.3s ease; /* Transición suave para el hover */
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+    box-sizing: border-box; /* Incluir padding y border en el ancho total */
+}
+
+.cta-button:hover {
+    background: #e0e3e4; /* Color de fondo al pasar el ratón igual al de los otros botones */
+    color: #232323; /* Color de texto al pasar el ratón */
+}
+
+
+.comienza-seccion {
+    background: #ffffff; /* Fondo blanco para separar del cuadro gris */
+    border-radius: 8px; /* Bordes redondeados */
+    margin-top: 20px; /* Espacio arriba de la sección */
+    margin-bottom: 40px; /* Espacio abajo para el footer */
+
+    text-align: left; /* Centrar el texto */
+}
+
+.comienza-seccion .cta-button {
+    display: inline-block; /* Botón en línea con el texto */
+    font-size: 14px; /* Tamaño de fuente ajustado */
+    padding: 10px 20px; /* Espaciado interno del botón */
+    background: #937c6f; /* Color de fondo del botón */
+    color: #ffffff; /* Color de texto del botón */
+    text-align: center; /* Centrar el texto dentro del botón */
+    text-decoration: none; /* Sin subrayado en el enlace */
+    border-radius: 4px; /* Bordes redondeados */
+    transition: background 0.3s ease; /* Transición suave para el hover */
+    width: auto; /* Ajustar al contenido del texto */
+    box-sizing: border-box; /* Incluir padding y border en el ancho total */
+}
+
+.comienza-seccion .cta-button:hover {
+    background: #e0e3e4; /* Color de fondo al pasar el ratón */
+    color: #232323; /* Color de texto al pasar el ratón */
+}

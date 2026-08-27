@@ -1,0 +1,177 @@
+
+/*********************************
+3. Header
+*********************************/
+
+.header
+{
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: 70px;
+	background: #FFFFFF;
+	z-index: 100;
+	-webkit-transition: all 200ms ease;
+	-moz-transition: all 200ms ease;
+	-ms-transition: all 200ms ease;
+	-o-transition: all 200ms ease;
+	transition: all 200ms ease;
+}
+.header.scrolled
+{
+	height: 70px;
+}
+.header_inner
+{
+	width: 100%;
+	height: 100%;
+	margin-left: 10px;
+}
+
+
+/*********************************
+3.2 Header - Main Navigation
+*********************************/
+
+.main_nav
+{
+	padding-left: 0;
+	margin-left: 50px;
+	padding-top: 15px;
+	-webkit-transform: translateY(4px);
+	-moz-transform: translateY(4px);
+	-ms-transform: translateY(4px);
+	-o-transform: translateY(4px);
+	transform: translateY(4px);
+}
+.main_nav ul li
+{
+	display: inline-block;
+	margin-right: 20px;
+}
+.main_nav ul li:last-child
+{
+	margin-right: 0;
+}
+.main_nav ul li a
+{
+	font-size: 12px;
+	text-transform: uppercase;
+	color: #2f2f2f;
+	font-weight: 600;
+	letter-spacing: 0.2em;
+	-webkit-transition: all 200ms ease;
+	-moz-transition: all 200ms ease;
+	-ms-transition: all 200ms ease;
+	-o-transition: all 200ms ease;
+	transition: all 200ms ease;
+}
+.main_nav ul li a:hover
+{
+	color: #BAC4CF;
+}
+
+/*********************************
+3.3 Header - Search
+*********************************/
+
+.search
+{
+	margin-top: 20px;
+	display: inline-block;
+	width: 400px;
+	-webkit-transform: translateY(2px);
+	-moz-transform: translateY(2px);
+	-ms-transform: translateY(2px);
+	-o-transform: translateY(2px);
+	transform: translateY(2px);
+}
+.search_input
+{
+	margin-top: 22px; /* Ajusta según sea necesario */
+	width: 100%;
+	height: 40px;
+	border-width: medium;
+	border-color: #BAC4CF;
+	border-radius: 20px;
+	outline: none;
+	padding-left: 20px;
+}
+.search_button
+{
+	padding-top: 13px;
+	position: absolute;
+	top: 45%;
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	transform: translateY(-50%);
+	right: 10px;
+	width: 19px;
+	height: 19px;
+	background: transparent;
+	border: none;
+	outline: none;
+}
+.search_button:focus
+{
+	outline: none ;
+}
+.search_button img
+{
+	max-width: 100%;
+}
+
+/*********************************
+3.4 Header - Shopping
+*********************************/
+
+.shopping
+{
+	display: inline-block;
+	margin-left: 351px;
+	padding-right: 161px;
+	padding-top: 25px;
+	-webkit-transform: translateY(-2px);
+	-moz-transform: translateY(-2px);
+	-ms-transform: translateY(-2px);
+	-o-transform: translateY(-2px);
+	transform: translateY(-2px);
+}
+
+.star_num_container
+{
+	position: absolute;
+	top: 18px;
+	left: -5px;
+	width: 15px;
+	height: 15px;
+	background: #BAC4CF;
+	border-radius: 50%;
+}
+.star_num_inner
+{
+	width: 100%;
+	height: 100%;
+}
+
+.star_num
+{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	font-size: 9px;
+	font-weight: 600;
+	color: #FFFFFF;
+}
+.star img
+{
+	width: 30px;
+	height: 30px;
+}

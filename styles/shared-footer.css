@@ -1,0 +1,67 @@
+/* FUENTE ÚNICA DEL FOOTER COMPARTIDO DE TF3GEST */
+/* Footer global de TF3Gest — fuente única de verdad */
+.nw-footer{
+  width:100%;
+  margin-top:auto;
+  padding:50px 0 22px;
+  background:#071322;
+  color:#94a3b8;
+  font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  font-size:16px;
+  font-weight:400;
+  line-height:1.5;
+  -webkit-text-size-adjust:100%;
+  text-size-adjust:100%;
+}
+.nw-footer,.nw-footer *{box-sizing:border-box}
+.nw-footer a{text-decoration:none}
+.nw-footer p{margin:0;color:#94a3b8}
+.nw-footer__shell{width:min(1180px,calc(100% - 48px));margin:0 auto}
+.nw-footer__top{display:grid;grid-template-columns:minmax(260px,.72fr) minmax(520px,1.28fr);gap:52px}
+.nw-footer__logo{display:flex;align-items:center;gap:13px;color:#fff}
+.nw-footer__logo-mark{display:grid;place-items:center;flex:0 0 54px;width:54px;height:46px}
+.nw-footer__logo-mark img{display:block;width:54px;height:38px;object-fit:contain;object-position:center}
+.nw-footer__logo>span:last-child{display:grid;gap:2px}
+.nw-footer__logo strong{color:#fff;font-size:16px;line-height:18px;font-weight:700}
+.nw-footer__logo small{color:#8fa0b7;font-size:12px;line-height:14px;font-weight:400}
+.nw-footer__brand>p{max-width:390px;margin-top:16px;font-size:14px;line-height:23px;font-weight:400}
+.nw-footer__platform{display:inline-flex;align-items:center;gap:10px;margin-top:18px;padding:8px 11px;border:1px solid rgba(255,255,255,.1);border-radius:10px;background:rgba(255,255,255,.035)}
+.nw-footer__platform>.nw-icon{flex:0 0 20px;width:20px;height:20px;color:#7db4ff}
+.nw-footer__platform>span{display:grid;gap:1px}
+.nw-footer__platform strong{color:#dce6f4;font-size:12px;line-height:15px;font-weight:700}
+.nw-footer__platform small{color:#8798af;font-size:11px;line-height:14px;font-weight:400}
+.nw-footer__links{display:grid;grid-template-columns:repeat(3,minmax(120px,1fr));gap:28px}
+.nw-footer__column>strong{display:block;color:#fff;font-size:14px;line-height:18px;font-weight:700}
+.nw-footer__column a{display:block;margin-top:10px;color:#94a3b8;font-size:13px;line-height:18px;font-weight:400;transition:color .18s ease}
+.nw-footer__column a:hover,.nw-footer__column a:focus-visible{color:#fff}
+.nw-footer__bottom{position:relative;display:flex;align-items:center;justify-content:space-between;gap:20px;margin-top:40px;padding-top:22px;border-top:1px solid rgba(255,255,255,.1)}
+/* Fijado en px para que el copyright y los badges sean idénticos en todas las páginas. */
+.nw-footer__bottom>p,
+.nw-footer__bottom>p span,
+.nw-footer__badges span{
+  font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif !important;
+  font-size:12px !important;
+  font-weight:400 !important;
+  line-height:20px !important;
+  letter-spacing:0 !important;
+  text-transform:none !important;
+}
+.nw-footer__bottom>p{color:#94a3b8 !important;white-space:normal}
+.nw-footer__badges{display:flex;align-items:center;gap:14px}
+.nw-footer__badges span{display:inline-flex;align-items:center;gap:7px;color:#94a3b8 !important;white-space:nowrap}
+.nw-footer__badges .nw-icon{flex:0 0 15px;width:15px;height:15px;color:#79adf4}
+.nw-footer svg{fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.nw-footer .nw-icon--windows{fill:currentColor;stroke:none}
+.nw-footer__back{display:grid;place-items:center;flex:0 0 40px;width:40px;height:40px;border:1px solid rgba(255,255,255,.09);border-radius:11px;background:rgba(255,255,255,.055);color:#fff}
+.nw-footer__back .nw-icon{width:18px;height:18px}
+.nw-footer__back-text{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+@media(max-width:1040px){.nw-footer__top{grid-template-columns:1fr;gap:38px}}
+@media(max-width:680px){
+  .nw-footer{padding-top:44px}
+  .nw-footer__shell{width:calc(100% - 32px)}
+  .nw-footer__links{grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 18px}
+  .nw-footer__column:last-child{grid-column:1/-1}
+  .nw-footer__bottom{align-items:flex-start;flex-direction:column;padding-right:54px}
+  .nw-footer__badges{flex-wrap:wrap}
+  .nw-footer__back{position:absolute;right:0;top:18px}
+}
