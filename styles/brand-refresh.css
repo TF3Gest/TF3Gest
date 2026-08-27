@@ -15,7 +15,7 @@
 .header.is-scrolled{background:rgba(255,255,255,.98);box-shadow:0 10px 34px rgba(0,26,61,.08)}
 .nw-nav__inner{height:82px}
 .nw-brand{gap:0}
-.nw-brand img{width:205px!important;height:58px!important;object-fit:contain!important;object-position:left center}
+.nw-brand img{width:240px!important;height:73px!important;object-fit:contain!important;object-position:left center;display:block}
 .nw-brand__copy{display:none!important}
 .nw-main-nav>a:not(.nw-nav-cta){color:#33445b;font-weight:700}
 .nw-main-nav>a:not(.nw-nav-cta):hover,.nw-main-nav>a.is-active{color:var(--tf3-blue);background:var(--tf3-sky)}
@@ -76,11 +76,11 @@
   .nw-hero__visual{width:100%;max-width:790px;margin-inline:auto}
 }
 @media(max-width:960px){
-  .nw-brand img{width:175px!important;height:52px!important}
+  .nw-brand img{width:215px!important;height:66px!important}
 }
 @media(max-width:720px){
   .header,.nw-nav__inner{height:74px}
-  .nw-brand img{width:155px!important;height:46px!important}
+  .nw-brand img{width:190px!important;height:58px!important}
   .nw-hero{padding-top:122px!important;padding-bottom:68px!important}
   .nw-hero h1{font-size:clamp(2.55rem,13vw,4.05rem)!important}
   .nw-hero__lead{font-size:1.02rem!important}
