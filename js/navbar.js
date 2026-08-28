@@ -55,7 +55,23 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!container.contains(event.target)) closeMenu();
   });
   document.addEventListener('keydown', event => {
-    if (event.key === 'Escape' && nav.classList.contains('is-open')) closeMenu(true);
+    if (event.key === 'Escape' && nav.classList.contains('is-open')) {
+      closeMenu(true);
+      return;
+    }
+
+    if (event.key === 'Tab' && nav.classList.contains('is-open')) {
+      const focusable = [toggle, ...nav.querySelectorAll('a[href]')].filter(el => !el.hasAttribute('disabled'));
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        last.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first.focus();
+      }
+    }
   });
   window.addEventListener('resize', () => {
     if (innerWidth > 960) closeMenu();

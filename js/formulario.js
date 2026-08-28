@@ -105,7 +105,7 @@
       form.classList.toggle("is-submitting", submitting);
       submitButton.disabled = submitting;
       submitButton.setAttribute("aria-busy", submitting ? "true" : "false");
-      submitLabel.textContent = submitting ? "Enviando solicitud…" : "Solicitar demostración";
+      submitLabel.textContent = submitting ? "Enviando solicitud…" : "Probar TF3Gest gratis";
     }
 
     fields.forEach(function (field) {
