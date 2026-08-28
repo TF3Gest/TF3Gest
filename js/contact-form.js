@@ -13,8 +13,6 @@
     var form = document.getElementById("review_form");
     if (!form) return;
 
-    form.noValidate = true;
-
     var button = document.getElementById("enviar_mensaje");
     var buttonLabel = button ? button.querySelector("span") : null;
     var buttonIcon = button ? button.querySelector("i") : null;
@@ -45,7 +43,6 @@
       var input = field.input;
       var wrapper = input.closest("label");
       var error = errorElement(input);
-
       if (wrapper) wrapper.classList.toggle("has-error", Boolean(message));
       input.setAttribute("aria-invalid", message ? "true" : "false");
       if (error) error.textContent = message || "";
@@ -111,19 +108,17 @@
       status.textContent = message;
     }
 
-    function setSubmitting(submitting) {
+    function setSubmitting() {
       if (!button) return;
-      button.disabled = submitting;
-      button.setAttribute("aria-busy", submitting ? "true" : "false");
-      form.setAttribute("aria-busy", submitting ? "true" : "false");
-      if (buttonLabel) buttonLabel.textContent = submitting ? "Enviando…" : "Enviar mensaje";
-      if (buttonIcon) {
-        buttonIcon.className = submitting ? "fa fa-spinner fa-spin" : "fa fa-paper-plane-o";
-      }
+      button.disabled = true;
+      button.setAttribute("aria-busy", "true");
+      form.setAttribute("aria-busy", "true");
+      if (buttonLabel) buttonLabel.textContent = "Enviando…";
+      if (buttonIcon) buttonIcon.className = "fa fa-spinner fa-spin";
     }
 
     function preselectSubject() {
-      if (!subject) return;
+      if (!subject || typeof URLSearchParams === "undefined") return;
       var params = new URLSearchParams(window.location.search);
       var query = params.get("motivo") || params.get("asunto");
       if (!query) return;
@@ -170,8 +165,13 @@
 
     preselectSubject();
 
-    form.addEventListener("submit", async function (event) {
-      event.preventDefault();
+    /*
+      Importante: NO usamos fetch/AJAX aquí.
+      Si todo es válido dejamos que el navegador envíe el formulario
+      directamente al action de Formspree. Es más robusto y funciona
+      incluso si hay restricciones CORS o cambios en la API AJAX.
+    */
+    form.addEventListener("submit", function (event) {
       clearStatus();
 
       var valid = true;
@@ -180,31 +180,22 @@
       });
       if (!validateConsent()) valid = false;
 
-      if (!valid || !form.checkValidity()) {
+      var honeypot = document.getElementById("contact-company-web");
+      if (honeypot && honeypot.value) {
+        event.preventDefault();
+        return;
+      }
+
+      if (!valid) {
+        event.preventDefault();
         showError("Revisa los campos indicados antes de enviar el mensaje.");
         var firstInvalid = form.querySelector('[aria-invalid="true"]');
         if (firstInvalid) firstInvalid.focus();
         return;
       }
 
-      var honeypot = document.getElementById("contact-company-web");
-      if (honeypot && honeypot.value) return;
-
-      setSubmitting(true);
-
-      try {
-        var response = await fetch(form.action, {
-          method: "POST",
-          body: new FormData(form),
-          headers: { "Accept": "application/json" }
-        });
-
-        if (!response.ok) throw new Error("No se pudo enviar el mensaje.");
-        window.location.assign("gracias.html");
-      } catch (error) {
-        showError("No hemos podido enviar el mensaje. Comprueba tu conexión o inténtalo de nuevo dentro de unos minutos.");
-        setSubmitting(false);
-      }
+      setSubmitting();
+      // Sin preventDefault(): envío HTML nativo a Formspree.
     });
   });
 })();
