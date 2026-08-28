@@ -365,3 +365,27 @@ h1,h2,h3,h4,p,li,small,strong,span,a{
     padding-right:15px!important;
   }
 }
+
+
+/* V9.7 — contrast and CTA spacing fixes */
+.nw-security-cards strong{
+  color:#fff!important;
+}
+.nw-security-cards span{
+  color:#c8d6e8!important;
+}
+.nw-faq-card h3{
+  color:var(--tf3-navy)!important;
+}
+.nw-faq-card p{
+  color:var(--tf3-muted)!important;
+}
+.nw-migration-cta + .nw-inline-link{
+  margin-left:18px;
+}
+@media(max-width:600px){
+  .nw-migration-cta + .nw-inline-link{
+    margin-left:0;
+    margin-top:16px;
+  }
+}
