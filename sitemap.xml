@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://tf3gest.com/</loc><lastmod>2026-08-27</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://tf3gest.com/contact.html</loc><lastmod>2026-08-27</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url>
-    <loc>https://tf3gest.com/declaracion-responsable.html</loc>
+    <loc>https://tf3gest.com/</loc>
+    <lastmod>2026-08-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
   </url>
-  <url><loc>https://tf3gest.com/privacidad.html</loc><lastmod>2026-08-27</lastmod><changefreq>yearly</changefreq><priority>0.4</priority></url>
-  <url><loc>https://tf3gest.com/aviso-legal.html</loc><lastmod>2026-08-27</lastmod><changefreq>yearly</changefreq><priority>0.4</priority></url>
+  <url>
+    <loc>https://tf3gest.com/contact.html</loc>
+    <lastmod>2026-08-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>

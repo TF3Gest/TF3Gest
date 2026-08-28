@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <a data-section="pricing-section" href="${homeHref('#pricing-section')}">Precio</a>
         <a data-section="faq-section" href="${homeHref('#faq-section')}">FAQ</a>
         <a href="contact.html"${pageName === 'contact.html' ? ' class="is-active" aria-current="page"' : ''}>Contacto</a>
-        <a class="nw-nav-cta" href="${homeHref('#download-section')}">Solicitar demo <span aria-hidden="true">→</span></a>
+        <a class="nw-nav-cta" href="${homeHref('#download-section')}">Probar gratis <span aria-hidden="true">→</span></a>
       </nav>
     </div>`;
 

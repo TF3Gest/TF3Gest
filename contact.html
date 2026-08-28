@@ -61,7 +61,10 @@
 <p>Te enseñamos el programa y podrás probarlo durante 14 días gratis.</p>
 </div>
 </div>
-<form class="nw-contact-form" id="review_form" novalidate="">
+<form action="https://formspree.io/f/mojgddly" class="nw-contact-form" id="review_form" method="POST" novalidate="">
+<input name="_subject" type="hidden" value="Nuevo mensaje desde Contacto de TF3Gest"/>
+<input name="_language" type="hidden" value="es"/>
+<input autocomplete="off" aria-hidden="true" name="_gotcha" style="display:none" tabindex="-1" type="text"/>
 <div class="nw-contact-fields">
 <label>
 <span>Nombre</span>
@@ -92,7 +95,7 @@
 <textarea id="mensaje" name="mensaje" placeholder="Cuéntanos brevemente qué necesitas..." required="" rows="6"></textarea>
 </label>
 <label class="nw-contact-consent">
-<input id="privacidad" required="" type="checkbox"/>
+<input id="privacidad" name="privacidad" required="" type="checkbox" value="aceptada"/>
 <span>He leído y acepto la <a href="privacidad.html">política de privacidad</a>.</span>
 </label>
 <button class="nw-contact-submit" id="enviar_mensaje" type="submit">
@@ -122,18 +125,13 @@
 <script defer="" src="js/navbar.js?v=20260828"></script>
 <script defer="" src="js/site-enhancements.js?v=2"></script>
 
-<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 <script>
     document.addEventListener('DOMContentLoaded', function () {
       const form = document.getElementById('review_form');
       const button = document.getElementById('enviar_mensaje');
       const status = document.getElementById('contact_status');
 
-      if (window.emailjs) {
-        emailjs.init('ydk720-8RlvPOol8Y');
-      }
-
-      form.addEventListener('submit', function (event) {
+      form.addEventListener('submit', async function (event) {
         event.preventDefault();
 
         if (!form.checkValidity()) {
@@ -147,37 +145,21 @@
         status.className = 'nw-contact-status';
         status.textContent = '';
 
-        const templateParams = {
-          nombre: document.getElementById('nombre').value.trim(),
-          email: document.getElementById('email').value.trim(),
-          telefono: document.getElementById('telefono').value.trim(),
-          asunto: document.getElementById('asunto').value,
-          mensaje: document.getElementById('mensaje').value.trim()
-        };
+        try {
+          const response = await fetch(form.action, {
+            method: 'POST',
+            body: new FormData(form),
+            headers: { 'Accept': 'application/json' }
+          });
 
-        if (!window.emailjs) {
+          if (!response.ok) throw new Error('No se pudo enviar el mensaje.');
+          window.location.href = 'gracias.html';
+        } catch (error) {
           status.className = 'nw-contact-status is-error';
-          status.textContent = 'No se ha podido cargar el servicio de envío. Inténtalo de nuevo más tarde.';
+          status.textContent = 'No se ha podido enviar el mensaje. Comprueba tu conexión o inténtalo de nuevo más tarde.';
           button.disabled = false;
           button.innerHTML = originalText;
-          return;
         }
-
-        emailjs.send('service_312yuv8', 'template_l0o2xu9', templateParams)
-          .then(function () {
-            status.className = 'nw-contact-status is-success';
-            status.textContent = 'Mensaje enviado correctamente. Te responderemos lo antes posible.';
-            form.reset();
-          })
-          .catch(function (error) {
-            console.error('Error al enviar el mensaje:', error);
-            status.className = 'nw-contact-status is-error';
-            status.textContent = 'No se ha podido enviar el mensaje. Revisa los datos o inténtalo de nuevo.';
-          })
-          .finally(function () {
-            button.disabled = false;
-            button.innerHTML = originalText;
-          });
       });
     });
   </script>
