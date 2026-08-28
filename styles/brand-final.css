@@ -389,3 +389,16 @@ h1,h2,h3,h4,p,li,small,strong,span,a{
     margin-top:16px;
   }
 }
+
+
+/* V9.8 — final alignment/contrast corrections */
+@media (max-width:1100px){
+  .nw-contact-copy h1{
+    margin-left:auto!important;
+    margin-right:auto!important;
+    text-align:center!important;
+  }
+}
+.seo-page-cta__box h2{
+  color:#fff!important;
+}
