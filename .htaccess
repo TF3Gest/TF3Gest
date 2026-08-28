@@ -1,0 +1,29 @@
+# TF3Gest — canonicalización, errores y entrega básica
+DirectoryIndex index.html
+ErrorDocument 404 /404.html
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+
+# Una única versión pública: HTTPS + sin www.
+RewriteCond %{HTTPS} !=on [OR]
+RewriteCond %{HTTP_HOST} ^www\.tf3gest\.com$ [NC]
+RewriteRule ^ https://tf3gest.com%{REQUEST_URI} [R=301,L]
+
+# Evita la duplicidad entre / y /index.html.
+RewriteCond %{THE_REQUEST} \s/+index\.html(?:[\s?]) [NC]
+RewriteRule ^index\.html$ https://tf3gest.com/ [R=301,L]
+</IfModule>
+
+<IfModule mod_deflate.c>
+AddOutputFilterByType DEFLATE text/html text/plain text/css text/javascript application/javascript application/json application/manifest+json application/xml image/svg+xml
+</IfModule>
+
+<IfModule mod_expires.c>
+ExpiresActive On
+ExpiresByType text/css "access plus 7 days"
+ExpiresByType application/javascript "access plus 7 days"
+ExpiresByType image/png "access plus 30 days"
+ExpiresByType image/x-icon "access plus 30 days"
+ExpiresByType font/woff2 "access plus 30 days"
+</IfModule>
