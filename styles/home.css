@@ -88,7 +88,7 @@ main{padding-top:76px},.nw-features-section,.nw-ideal-section,.nw-included-secti
   background:linear-gradient(145deg,#edf5ff,#dfeeff);
   box-shadow:inset 0 1px 0 rgba(255,255,255,.9),0 8px 20px rgba(20,115,247,.10);
 }
-.nw-download-form-icon svg,
+.nw-download-form-icon svg{
   width:21px;
   height:21px;
   fill:none;

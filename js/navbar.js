@@ -30,6 +30,15 @@ document.addEventListener('DOMContentLoaded', () => {
   const nav = container.querySelector('.nw-main-nav');
   const links = [...nav.querySelectorAll('[data-section]')];
 
+  const positionMobileMenu = () => {
+    if (innerWidth > 900 || !header) {
+      nav.style.removeProperty('top');
+      return;
+    }
+    const bottom = Math.round(header.getBoundingClientRect().bottom);
+    nav.style.top = `${bottom + 8}px`;
+  };
+
   const closeMenu = (restoreFocus = false) => {
     nav.classList.remove('is-open');
     toggle.classList.remove('is-open');
@@ -41,6 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   toggle.addEventListener('click', () => {
     const opening = !nav.classList.contains('is-open');
+    if (opening) positionMobileMenu();
     nav.classList.toggle('is-open', opening);
     toggle.classList.toggle('is-open', opening);
     toggle.setAttribute('aria-expanded', String(opening));
@@ -74,10 +84,17 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
   window.addEventListener('resize', () => {
-    if (innerWidth > 960) closeMenu();
+    if (innerWidth > 900) {
+      closeMenu();
+    } else if (nav.classList.contains('is-open')) {
+      positionMobileMenu();
+    }
   });
 
-  const updateHeader = () => header?.classList.toggle('is-scrolled', scrollY > 8);
+  const updateHeader = () => {
+    header?.classList.toggle('is-scrolled', scrollY > 8);
+    if (nav.classList.contains('is-open')) positionMobileMenu();
+  };
   updateHeader();
   addEventListener('scroll', updateHeader, { passive: true });
 

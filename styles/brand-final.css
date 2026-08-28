@@ -209,3 +209,159 @@ a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,s
 .nw-skip-link:focus{
   transform:translateY(0);
 }
+
+
+/* V9.6 — responsive, touch and overflow hardening */
+.nw-shell,
+.nw-nav__inner,
+.nw-footer__shell,
+.nw-page-shell,
+.legal-shell{
+  min-width:0;
+}
+.nw-hero__copy,
+.nw-hero__visual,
+.nw-feature-card,
+.nw-migration-copy,
+.nw-migration-data,
+.nw-plan-summary,
+.nw-plan-core,
+.nw-faq-list,
+.nw-faq-card,
+.nw-download-copy,
+.nw-download-form-card{
+  min-width:0;
+}
+h1,h2,h3,h4,p,li,small,strong,span,a{
+  overflow-wrap:break-word;
+}
+.nw-btn,
+.nw-nav-cta,
+.nw-menu-toggle,
+.nw-main-nav>a,
+.nw-faq-item summary,
+.nw-more-features summary,
+.nw-plan-details summary{
+  min-height:44px;
+}
+.nw-menu-toggle{
+  min-width:44px;
+  flex:0 0 44px;
+}
+.nw-form-field input,
+.nw-form-field select,
+.nw-form-field textarea{
+  max-width:100%;
+}
+@media(max-width:900px){
+  .nw-main-nav{
+    max-height:calc(100dvh - 104px);
+    overflow-y:auto;
+    overscroll-behavior:contain;
+    -webkit-overflow-scrolling:touch;
+  }
+}
+@media(max-width:760px){
+  .nw-shell,
+  .nw-nav__inner,
+  .nw-footer__shell{
+    width:calc(100% - 32px)!important;
+  }
+  .nw-form-field input,
+  .nw-form-field select,
+  .nw-form-field textarea{
+    min-height:48px;
+    font-size:16px!important;
+  }
+  .nw-form-field textarea{
+    min-height:112px;
+  }
+  .nw-download-form-card{
+    padding:22px 18px!important;
+  }
+  .nw-form-grid{
+    padding:14px!important;
+    gap:13px!important;
+  }
+  .nw-faq-item summary{
+    padding:17px 16px!important;
+  }
+  .nw-faq-answer{
+    padding-left:16px!important;
+    padding-right:16px!important;
+  }
+  .nw-footer__bottom{
+    gap:18px!important;
+  }
+}
+@media(max-width:430px){
+  .nw-shell,
+  .nw-nav__inner,
+  .nw-footer__shell{
+    width:calc(100% - 24px)!important;
+  }
+  .nw-brand .nw-brand__logo,
+  .nw-brand>img{
+    width:158px!important;
+    max-height:42px!important;
+  }
+  .nw-menu-toggle{
+    width:44px!important;
+    height:44px!important;
+  }
+  .nw-main-nav{
+    left:12px!important;
+    right:12px!important;
+    border-radius:16px!important;
+  }
+  .nw-hero{
+    padding-top:30px!important;
+    padding-bottom:46px!important;
+  }
+  .nw-hero h1{
+    font-size:clamp(2.25rem,11.5vw,3.15rem)!important;
+    line-height:1.02!important;
+  }
+  .nw-kicker,
+  .nw-section-kicker,
+  .nw-download-kicker,
+  .nw-verifactu-eyebrow{
+    line-height:1.3!important;
+  }
+  .nw-plan-summary{
+    padding:26px 18px!important;
+  }
+  .nw-price strong{
+    font-size:2.8rem!important;
+  }
+  .nw-download-form-card{
+    padding:18px 14px!important;
+    border-radius:20px!important;
+  }
+  .nw-form-grid{
+    padding:12px!important;
+    border-radius:15px!important;
+  }
+  .nw-download-form-heading{
+    align-items:flex-start!important;
+  }
+}
+@media(max-width:360px){
+  .nw-brand .nw-brand__logo,
+  .nw-brand>img{
+    width:146px!important;
+  }
+  .nw-hero h1{
+    font-size:2.18rem!important;
+  }
+  .nw-btn{
+    padding-left:14px!important;
+    padding-right:14px!important;
+  }
+  .nw-feature-card,
+  .nw-migration-data,
+  .nw-migration-steps span{
+    padding-left:15px!important;
+    padding-right:15px!important;
+  }
+}
