@@ -13,6 +13,8 @@
     var form = document.getElementById("trial-form");
     if (!form) return;
 
+    form.noValidate = true;
+
     var submitButton = document.getElementById("trial-submit");
     var submitLabel = submitButton.querySelector(".nw-submit-label");
     var status = document.getElementById("trial-form-status");
@@ -65,8 +67,8 @@
       }
 
       if (value && input.type === "tel") {
-        var normalizedPhone = value.replace(/[^\d+]/g, "");
-        if (normalizedPhone.length < 7) {
+        var digits = value.replace(/\D/g, "");
+        if (digits.length < 7 || digits.length > 15) {
           setFieldError(field, field.message);
           return false;
         }
@@ -93,16 +95,19 @@
 
     function showStatus(type, message) {
       status.className = "nw-form-status is-visible is-" + type;
+      status.setAttribute("role", type === "error" ? "alert" : "status");
       status.textContent = message;
     }
 
     function clearStatus() {
       status.className = "nw-form-status";
+      status.setAttribute("role", "status");
       status.textContent = "";
     }
 
     function setSubmitting(submitting) {
       form.classList.toggle("is-submitting", submitting);
+      form.setAttribute("aria-busy", submitting ? "true" : "false");
       submitButton.disabled = submitting;
       submitButton.setAttribute("aria-busy", submitting ? "true" : "false");
       submitLabel.textContent = submitting ? "Enviando solicitud…" : "Probar TF3Gest gratis";

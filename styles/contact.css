@@ -309,3 +309,51 @@
 .nw-contact-page .nw-nav__inner,
 .nw-contact-page .nw-main-nav,
 .nw-contact-page .nw-main-nav a { position:relative;z-index:10001;pointer-events:auto; }
+
+
+/* V9.9 — formularios: validación accesible y estados claros */
+.nw-contact-field-error{
+  display:block;
+  min-height:0;
+  margin-top:6px;
+  color:#a32323;
+  font-size:12px;
+  font-weight:650;
+  line-height:1.35;
+}
+.nw-contact-field-error:empty{
+  display:none;
+}
+.nw-contact-form label.has-error input,
+.nw-contact-form label.has-error select,
+.nw-contact-form label.has-error textarea{
+  border-color:#d14b4b;
+  background:#fffafa;
+  box-shadow:0 0 0 3px rgba(209,75,75,.09);
+}
+.nw-contact-consent.has-error{
+  color:#8f2525;
+}
+.nw-contact-field-error--consent{
+  margin:6px 0 0 27px;
+}
+.nw-contact-form[aria-busy="true"]{
+  cursor:progress;
+}
+.nw-contact-form[aria-busy="true"] input,
+.nw-contact-form[aria-busy="true"] select,
+.nw-contact-form[aria-busy="true"] textarea{
+  cursor:progress;
+}
+.nw-contact-submit:focus-visible,
+.nw-contact-consent a:focus-visible{
+  outline:3px solid rgba(20,115,247,.28);
+  outline-offset:3px;
+}
+@media(max-width:680px){
+  .nw-contact-form input,
+  .nw-contact-form select,
+  .nw-contact-form textarea{
+    font-size:16px;
+  }
+}

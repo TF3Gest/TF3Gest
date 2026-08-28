@@ -295,7 +295,7 @@
 </span>
 <div><strong>Solicita acceso a la prueba</strong><span>Déjanos tus datos y te ayudamos a poner en marcha la prueba.</span></div>
 </div>
-<form action="https://formspree.io/f/mojgddly" class="nw-download-form" id="trial-form" method="POST" novalidate="">
+<form action="https://formspree.io/f/mojgddly" aria-describedby="trial-form-status" class="nw-download-form" id="trial-form" method="POST">
 <input name="_subject" type="hidden" value="Nueva solicitud de prueba de TF3Gest"/>
 <input name="_language" type="hidden" value="es"/>
 <input name="origen" type="hidden" value="Landing principal"/>
@@ -308,9 +308,9 @@
 <circle cx="12" cy="8" r="3"></circle>
 <path d="M5.5 20a6.5 6.5 0 0 1 13 0"></path>
 </svg>
-<input aria-describedby="trial-name-error" autocomplete="name" id="trial-name" maxlength="80" minlength="2" name="nombre" placeholder="Tu nombre" required="" type="text"/>
+<input aria-describedby="trial-name-error" autocapitalize="words" autocomplete="name" id="trial-name" maxlength="80" minlength="2" name="nombre" placeholder="Tu nombre" required="" spellcheck="false" type="text"/>
 </div>
-<small class="nw-field-error" id="trial-name-error">
+<small aria-atomic="true" aria-live="polite" class="nw-field-error" id="trial-name-error">
 </small>
 </div>
 <div class="nw-form-field">
@@ -319,9 +319,9 @@
 <svg aria-hidden="true" class="nw-icon" height="20" viewbox="0 0 24 24" width="20">
 <path d="M14.7 6.3a4 4 0 0 0-5-5l2.1 2.1-2.4 2.4-2.1-2.1a4 4 0 0 0 5 5L20 16.4a2.3 2.3 0 1 1-3.3 3.3L9 12"></path>
 </svg>
-<input aria-describedby="trial-workshop-error" autocomplete="organization" id="trial-workshop" maxlength="100" minlength="2" name="taller" placeholder="Nombre de tu taller" required="" type="text"/>
+<input aria-describedby="trial-workshop-error" autocapitalize="words" autocomplete="organization" id="trial-workshop" maxlength="100" minlength="2" name="taller" placeholder="Nombre de tu taller" required="" spellcheck="false" type="text"/>
 </div>
-<small class="nw-field-error" id="trial-workshop-error">
+<small aria-atomic="true" aria-live="polite" class="nw-field-error" id="trial-workshop-error">
 </small>
 </div>
 <div class="nw-form-field">
@@ -331,9 +331,9 @@
 <rect height="14" rx="2" width="18" x="3" y="5"></rect>
 <path d="m4 7 8 6 8-6"></path>
 </svg>
-<input aria-describedby="trial-email-error" autocomplete="email" id="trial-email" inputmode="email" maxlength="120" name="email" placeholder="nombre@tutaller.com" required="" type="email"/>
+<input aria-describedby="trial-email-error" autocapitalize="none" autocomplete="email" id="trial-email" inputmode="email" maxlength="120" name="email" placeholder="nombre@tutaller.com" required="" spellcheck="false" type="email"/>
 </div>
-<small class="nw-field-error" id="trial-email-error">
+<small aria-atomic="true" aria-live="polite" class="nw-field-error" id="trial-email-error">
 </small>
 </div>
 <div class="nw-form-field">
@@ -343,9 +343,9 @@
 <svg aria-hidden="true" class="nw-icon" height="20" viewbox="0 0 24 24" width="20">
 <path d="M7 3H4.5A1.5 1.5 0 0 0 3 4.5C3 13.6 10.4 21 19.5 21a1.5 1.5 0 0 0 1.5-1.5V17l-4-1-1.2 2a14 14 0 0 1-9.8-9.8L8 7Z"></path>
 </svg>
-<input aria-describedby="trial-phone-error" autocomplete="tel" id="trial-phone" inputmode="tel" maxlength="30" name="telefono" placeholder="600 000 000" type="tel"/>
+<input aria-describedby="trial-phone-error" autocapitalize="none" autocomplete="tel" id="trial-phone" inputmode="tel" maxlength="30" name="telefono" placeholder="600 000 000" spellcheck="false" type="tel"/>
 </div>
-<small class="nw-field-error" id="trial-phone-error">
+<small aria-atomic="true" aria-live="polite" class="nw-field-error" id="trial-phone-error">
 </small>
 </div>
 </div>
@@ -359,9 +359,9 @@
                   He leído y acepto la <a href="privacidad.html" rel="noopener noreferrer" target="_blank">política de privacidad</a> y el tratamiento de mis datos para gestionar la solicitud.
                 </span>
 </label>
-<small class="nw-field-error nw-field-error--consent" id="trial-consent-error">
+<small aria-atomic="true" aria-live="polite" class="nw-field-error nw-field-error--consent" id="trial-consent-error">
 </small>
-<div aria-live="polite" class="nw-form-status" id="trial-form-status" role="status">
+<div aria-atomic="true" aria-live="polite" class="nw-form-status" id="trial-form-status" role="status">
 </div>
 <button id="trial-submit" type="submit">
 <span class="nw-submit-label">Probar TF3Gest gratis</span>
@@ -383,7 +383,7 @@
 </div>
 <script defer="" src="js/navbar.js?v=20260828d">
 </script>
-<script defer="" src="js/formulario.js?v=5">
+<script defer="" src="js/formulario.js?v=7">
 </script>
 <script defer="" src="js/site-enhancements.js?v=3">
 </script>
