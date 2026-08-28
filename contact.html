@@ -89,7 +89,7 @@
 <input aria-describedby="privacidad-error" id="privacidad" name="privacidad" required="" type="checkbox" value="aceptada"/>
 <span>He leído y acepto la <a href="privacidad.html" rel="noopener noreferrer" target="_blank">política de privacidad</a>.</span>
 </label><small aria-atomic="true" aria-live="polite" class="nw-contact-field-error nw-contact-field-error--consent" id="privacidad-error"></small>
-<button class="nw-contact-submit" id="enviar_mensaje" type="submit">
+<button class="nw-contact-submit" id="enviar_mensaje" type="submit" formmethod="POST" formaction="https://formspree.io/f/maeyyloe">
 <i aria-hidden="true" class="fa fa-paper-plane-o"></i>
 <span>Enviar mensaje</span>
 </button>
@@ -113,7 +113,7 @@
 </main>
 </div>
 <script defer="" src="js/navbar.js?v=20260828d"></script>
-<script defer="" src="js/contact-form.js?v=3"></script><script defer="" src="js/site-enhancements.js?v=3"></script>
+<script defer="" src="js/site-enhancements.js?v=3"></script>
 <footer class="nw-footer">
 <div class="nw-footer__shell">
 <div class="nw-footer__top">
@@ -141,5 +141,42 @@
 </div>
 </div>
 </footer>
+
+<script>
+(function () {
+  function preselectContactSubject() {
+    var subject = document.getElementById("asunto");
+    if (!subject || typeof URLSearchParams === "undefined") return;
+    var params = new URLSearchParams(window.location.search);
+    var query = params.get("motivo") || params.get("asunto");
+    if (!query) return;
+
+    var aliases = {
+      prueba: "Prueba gratuita",
+      migracion: "Migración",
+      soporte: "Soporte",
+      contratacion: "Contratación y facturación",
+      consulta: "Otra consulta"
+    };
+    var wanted = (aliases[query.trim().toLowerCase()] || query.trim()).toLowerCase();
+
+    Array.prototype.some.call(subject.options, function (option) {
+      if (option.value.toLowerCase() === wanted ||
+          option.textContent.trim().toLowerCase() === wanted) {
+        subject.value = option.value;
+        return true;
+      }
+      return false;
+    });
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", preselectContactSubject);
+  } else {
+    preselectContactSubject();
+  }
+})();
+</script>
+
 </body>
 </html>
