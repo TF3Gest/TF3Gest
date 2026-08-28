@@ -1,54 +1,10 @@
 (() => {
-  const WORD = 'TF3Gest';
-  const SKIP = new Set(['SCRIPT','STYLE','TEXTAREA','SELECT','OPTION','NOSCRIPT','CODE','PRE','TITLE']);
-  const DARK = '.nw-footer,.nw-contact-hero,.legal-header,.nw-page-hero,.nw-verifactu-section,.nw-security-section,.nw-download-section,.nw-proof-strip,.nw-app-preview__topbar';
-
-  function replaceTextNode(node){
-    if (!node || !node.nodeValue || !node.nodeValue.includes(WORD)) return;
-    const parent=node.parentElement;
-    if (!parent || SKIP.has(parent.tagName)) return;
-    if (parent.closest('[data-tf3-text-only],.nw-brand,.nw-page-brand,.legal-brand,.nw-footer__logo')) return;
-
-    const parts=node.nodeValue.split(WORD);
-    const frag=document.createDocumentFragment();
-    parts.forEach((part,i)=>{
-      if(part) frag.appendChild(document.createTextNode(part));
-      if(i<parts.length-1){
-        const img=document.createElement('img');
-        const dark=!!parent.closest(DARK);
-        img.className='tf3-wordmark';
-        img.src=dark?'images/tf3gest-wordmark-white.png?v=20260828c':'images/tf3gest-wordmark.png?v=20260828c';
-        img.alt=WORD;
-        img.decoding='async';
-        frag.appendChild(img);
-      }
-    });
-    node.replaceWith(frag);
-  }
-
-  function process(scope=document.body){
-    if(!scope) return;
-    const walker=document.createTreeWalker(scope,NodeFilter.SHOW_TEXT,{acceptNode(node){
-      return node.nodeValue && node.nodeValue.includes(WORD) ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT;
-    }});
-    const nodes=[];
-    while(walker.nextNode()) nodes.push(walker.currentNode);
-    nodes.forEach(replaceTextNode);
-  }
-
-  const start=()=> {
-    process();
-    const observer=new MutationObserver(mutations=>{
-      for(const m of mutations){
-        for(const n of m.addedNodes){
-          if(n.nodeType===Node.TEXT_NODE) replaceTextNode(n);
-          else if(n.nodeType===Node.ELEMENT_NODE && !n.classList?.contains('tf3-wordmark')) process(n);
-        }
-      }
-    });
-    observer.observe(document.body,{childList:true,subtree:true});
-  };
-
-  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',start,{once:true});
-  else start();
+  const WORD='TF3Gest';
+  const DARK='.nw-verifactu-section,.nw-security-section,.nw-download-section,.nw-footer,.nw-contact-hero,.legal-header,.nw-page-hero,.nw-proof-strip,.nw-app-preview__topbar';
+  const DISPLAY='h1,h2,h3,.nw-btn,.nw-nav-cta,.nw-kicker,.nw-price-badge,.nw-download-kicker,.nw-verifactu-eyebrow,.nw-section-kicker';
+  const SKIP=new Set(['SCRIPT','STYLE','TEXTAREA','SELECT','OPTION','NOSCRIPT','CODE','PRE','TITLE']);
+  function replaceNode(node){if(!node?.nodeValue?.includes(WORD))return;const p=node.parentElement;if(!p||SKIP.has(p.tagName)||p.closest('[data-tf3-text-only],.nw-brand,.nw-page-brand,.legal-brand,.nw-footer__logo'))return;if(!p.closest(DISPLAY))return;const parts=node.nodeValue.split(WORD),frag=document.createDocumentFragment();parts.forEach((part,i)=>{if(part)frag.appendChild(document.createTextNode(part));if(i<parts.length-1){const img=document.createElement('img');img.className='tf3-wordmark';img.src=p.closest(DARK)?'images/tf3gest-wordmark-white.png?v=20260828d':'images/tf3gest-wordmark.png?v=20260828d';img.alt=WORD;img.decoding='async';frag.appendChild(img);}});node.replaceWith(frag);}
+  function process(scope=document.body){if(!scope)return;const w=document.createTreeWalker(scope,NodeFilter.SHOW_TEXT,{acceptNode:n=>n.nodeValue?.includes(WORD)?NodeFilter.FILTER_ACCEPT:NodeFilter.FILTER_REJECT});const nodes=[];while(w.nextNode())nodes.push(w.currentNode);nodes.forEach(replaceNode);}
+  const start=()=>{process();new MutationObserver(ms=>ms.forEach(m=>m.addedNodes.forEach(n=>{if(n.nodeType===3)replaceNode(n);else if(n.nodeType===1&&!n.classList?.contains('tf3-wordmark'))process(n);}))).observe(document.body,{childList:true,subtree:true});};
+  document.readyState==='loading'?document.addEventListener('DOMContentLoaded',start,{once:true}):start();
 })();
