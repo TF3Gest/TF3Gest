@@ -15,3 +15,74 @@ a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,s
 @media(max-width:1080px){.nw-features-grid--core{grid-template-columns:repeat(2,minmax(0,1fr))!important}.nw-more-features__grid{grid-template-columns:repeat(2,minmax(0,1fr))}.nw-migration-panel--split{grid-template-columns:1fr!important}.nw-migration-steps{grid-column:auto!important}.nw-plan-showcase--simple{grid-template-columns:1fr!important}}
 @media(max-width:760px){.header,.nw-nav__inner{height:74px!important}#inicio{padding-top:74px!important}.header.is-scrolled,.header.is-scrolled .nw-nav__inner{height:68px!important}.nw-brand .nw-brand__logo,.nw-brand>img{width:174px!important;height:46px!important}.header.is-scrolled .nw-brand .nw-brand__logo{width:162px!important;height:44px!important}.nw-hero{padding-top:36px!important;padding-bottom:54px!important}.nw-hero h1{font-size:clamp(2.5rem,12vw,3.8rem)!important}.nw-workflow-line{justify-content:flex-start;gap:8px}.nw-workflow-line>b{display:none}.nw-workflow-line>span{width:calc(50% - 4px);justify-content:flex-start}.nw-features-section,.nw-about-section,.nw-pricing-section,.nw-faq-section{padding:62px 0!important}.nw-features-grid--core{grid-template-columns:1fr!important}.nw-feature-card{min-height:0!important}.nw-more-features__grid{grid-template-columns:1fr}.nw-migration-section{padding:58px 0!important}.nw-migration-panel--split{padding:24px 18px!important;border-radius:18px!important}.nw-migration-data{padding:18px}.nw-migration-steps{grid-template-columns:1fr!important}.nw-migration-steps span{min-height:0!important}.nw-plan-core>ul,.nw-plan-details__grid{grid-template-columns:1fr}.nw-plan-core{padding:25px 20px!important}.nw-contact-page main{padding-top:74px!important}.nw-contact-hero{padding-top:36px!important;padding-bottom:46px!important}.nw-page-hero{padding-top:42px!important;padding-bottom:48px!important}.legal-hero{padding-top:30px!important;padding-bottom:44px!important}.nw-page-main>.nw-page-shell{padding-top:24px!important}.nw-page-brand--logo img,.legal-brand__logo{width:170px!important;height:46px!important}.nw-footer__logo-image{width:165px!important}}
 @media(max-width:440px){.nw-workflow-line>span{width:100%}.nw-hero__actions{display:grid!important}.nw-btn{width:100%!important;justify-content:center!important}.nw-migration-cta{width:100%!important}.nw-more-features summary,.nw-plan-details summary{padding:15px 16px}}
+
+/* V9.2 — refinements after the V8/V9 audit */
+.nw-feature-card,
+.nw-security-cards article,
+.nw-about-facts article,
+.nw-migration-steps span{
+  transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease;
+}
+@media (hover:hover){
+  .nw-feature-card:hover,
+  .nw-security-cards article:hover,
+  .nw-about-facts article:hover,
+  .nw-migration-steps span:hover{
+    transform:translateY(-2px);
+  }
+}
+.nw-more-features{
+  margin-top:26px!important;
+}
+.nw-more-features summary,
+.nw-plan-details summary{
+  cursor:pointer;
+}
+.nw-migration-copy p{
+  max-width:620px!important;
+}
+.nw-migration-data small{
+  font-size:.84rem;
+}
+.nw-pricing-footnote{
+  max-width:760px;
+  margin-left:auto!important;
+  margin-right:auto!important;
+  text-align:center;
+}
+@media(max-width:760px){
+  .nw-workflow-line{
+    display:grid!important;
+    grid-template-columns:1fr!important;
+    gap:0!important;
+  }
+  .nw-workflow-line>span{
+    position:relative;
+    width:100%!important;
+    min-height:58px;
+    padding:12px 14px!important;
+    border:1px solid #dce8f4;
+    border-radius:14px;
+    background:#fff;
+  }
+  .nw-workflow-line>span:not(:last-of-type){
+    margin-bottom:20px;
+  }
+  .nw-workflow-line>span:not(:last-of-type)::after{
+    content:"↓";
+    position:absolute;
+    left:50%;
+    bottom:-20px;
+    transform:translateX(-50%);
+    color:var(--tf3-blue);
+    font-weight:800;
+    line-height:20px;
+  }
+  .nw-migration-copy h2{
+    font-size:clamp(2rem,9vw,2.8rem)!important;
+  }
+  .nw-pricing-heading h2,
+  .nw-faq-heading h2{
+    font-size:clamp(2rem,9vw,2.8rem)!important;
+  }
+}
