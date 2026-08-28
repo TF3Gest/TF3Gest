@@ -1,0 +1,57 @@
+
+/* TF3Gest — páginas informativas SEO */
+.seo-page-main{background:#f6f8fc;color:#10213f}
+.seo-page-hero{padding:150px 0 72px;background:linear-gradient(180deg,#fff 0%,#f6f8fc 100%)}
+.seo-page-hero .nw-shell{max-width:920px}
+.seo-page-hero h1{margin:14px 0 18px;font-size:clamp(2.35rem,5vw,4.25rem);line-height:1.02;letter-spacing:-.045em;color:#071633}
+.seo-page-hero p{max-width:780px;margin:0;font-size:1.15rem;line-height:1.75;color:#53627a}
+.seo-page-actions{display:flex;align-items:center;gap:22px;flex-wrap:wrap;margin-top:30px}
+.seo-page-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;padding-top:22px;padding-bottom:70px}
+.seo-info-card{min-width:0;padding:30px;border:1px solid #dfe5ef;border-radius:22px;background:#fff;box-shadow:0 12px 34px rgba(7,22,51,.055)}
+.seo-info-card h2{margin:0 0 14px;font-size:1.35rem;line-height:1.25;color:#071633}
+.seo-info-card p,.seo-info-card li{color:#5a687e;line-height:1.72}
+.seo-info-card p{margin:0}
+.seo-info-card ul{margin:0;padding-left:21px}
+.seo-info-card a{font-weight:700;color:#1267d6}
+.seo-page-cta{padding:0 0 84px}
+.seo-page-cta__box{padding:42px;border-radius:26px;background:#071633;color:#fff;text-align:center}
+.seo-page-cta__box h2{margin:0 0 12px;font-size:clamp(1.7rem,3vw,2.35rem);color:#fff}
+.seo-page-cta__box p{max-width:680px;margin:0 auto 24px;color:#cbd6e8;line-height:1.7}
+@media(max-width:760px){
+ .seo-page-hero{padding:126px 0 52px}
+ .seo-page-grid{grid-template-columns:1fr;padding-bottom:52px}
+ .seo-info-card{padding:24px}
+ .seo-page-cta__box{padding:30px 22px}
+}
+
+.seo-breadcrumb{padding:108px 0 0;background:#fff}
+.seo-breadcrumb .nw-shell{display:flex;align-items:center;gap:9px;font-size:.9rem;color:#748197}
+.seo-breadcrumb a{color:#52627a;text-decoration:none;font-weight:650}
+.seo-breadcrumb a:hover{text-decoration:underline}
+.seo-breadcrumb [aria-current="page"]{color:#748197}
+.seo-breadcrumb + .seo-page-hero{padding-top:42px}
+@media(max-width:760px){
+ .seo-breadcrumb{padding-top:92px}
+ .seo-breadcrumb + .seo-page-hero{padding-top:32px}
+}
+
+.seo-guide-section{padding:6px 0 78px;background:#f6f8fc}
+.seo-guide-heading{max-width:800px;margin-bottom:28px}
+.seo-guide-heading h2{margin:12px 0 14px;font-size:clamp(1.8rem,3.4vw,2.6rem);line-height:1.12;letter-spacing:-.03em;color:#071633}
+.seo-guide-heading p{margin:0;color:#5a687e;line-height:1.75}
+.seo-process-list{display:grid;gap:12px;counter-reset:seo-step;margin:0;padding:0;list-style:none}
+.seo-process-list li{display:grid;grid-template-columns:minmax(170px,.65fr) 1.35fr;gap:24px;align-items:center;padding:20px 24px;border:1px solid #dfe5ef;border-radius:18px;background:#fff}
+.seo-process-list strong{color:#071633}
+.seo-process-list span{color:#5a687e;line-height:1.6}
+.seo-question-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.seo-question-grid article{padding:26px;border:1px solid #dfe5ef;border-radius:20px;background:#fff}
+.seo-question-grid h3,.seo-guide-note h3{margin:0 0 10px;color:#071633;font-size:1.08rem}
+.seo-question-grid p,.seo-guide-note p{margin:0;color:#5a687e;line-height:1.7}
+.seo-guide-note{margin-top:20px;padding:26px 28px;border-radius:20px;background:#eaf2ff}
+.seo-guide-note .nw-inline-link{display:inline-flex;margin-top:14px}
+@media(max-width:760px){
+ .seo-guide-section{padding-bottom:58px}
+ .seo-process-list li{grid-template-columns:1fr;gap:7px;padding:20px}
+ .seo-question-grid{grid-template-columns:1fr}
+ .seo-guide-note{padding:22px}
+}
