@@ -402,3 +402,27 @@ h1,h2,h3,h4,p,li,small,strong,span,a{
 .seo-page-cta__box h2{
   color:#fff!important;
 }
+
+
+/* V9.9 — agenda multiusuario launch offer */
+.nw-agenda-offer{
+  margin:20px 0 4px;
+  padding:17px 18px;
+  border:1px solid rgba(255,255,255,.24);
+  border-radius:16px;
+  background:rgba(255,255,255,.09);
+}
+.nw-agenda-offer__badge{
+  display:inline-flex;
+  align-items:center;
+  gap:7px;
+  margin-bottom:9px;
+  font-size:.78rem;
+  font-weight:800;
+  text-transform:uppercase;
+  letter-spacing:.04em;
+}
+.nw-agenda-offer strong,.nw-agenda-offer small{display:block;color:#fff!important;}
+.nw-agenda-offer strong{font-size:1rem;line-height:1.4;}
+.nw-agenda-offer small{margin-top:6px;opacity:.84;line-height:1.5;}
+.nw-plan-core>ul li.nw-plan-bonus i{color:var(--tf3-blue);}
