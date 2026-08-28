@@ -34,3 +34,24 @@
  .seo-breadcrumb{padding-top:92px}
  .seo-breadcrumb + .seo-page-hero{padding-top:32px}
 }
+
+.seo-guide-section{padding:6px 0 78px;background:#f6f8fc}
+.seo-guide-heading{max-width:800px;margin-bottom:28px}
+.seo-guide-heading h2{margin:12px 0 14px;font-size:clamp(1.8rem,3.4vw,2.6rem);line-height:1.12;letter-spacing:-.03em;color:#071633}
+.seo-guide-heading p{margin:0;color:#5a687e;line-height:1.75}
+.seo-process-list{display:grid;gap:12px;counter-reset:seo-step;margin:0;padding:0;list-style:none}
+.seo-process-list li{display:grid;grid-template-columns:minmax(170px,.65fr) 1.35fr;gap:24px;align-items:center;padding:20px 24px;border:1px solid #dfe5ef;border-radius:18px;background:#fff}
+.seo-process-list strong{color:#071633}
+.seo-process-list span{color:#5a687e;line-height:1.6}
+.seo-question-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.seo-question-grid article{padding:26px;border:1px solid #dfe5ef;border-radius:20px;background:#fff}
+.seo-question-grid h3,.seo-guide-note h3{margin:0 0 10px;color:#071633;font-size:1.08rem}
+.seo-question-grid p,.seo-guide-note p{margin:0;color:#5a687e;line-height:1.7}
+.seo-guide-note{margin-top:20px;padding:26px 28px;border-radius:20px;background:#eaf2ff}
+.seo-guide-note .nw-inline-link{display:inline-flex;margin-top:14px}
+@media(max-width:760px){
+ .seo-guide-section{padding-bottom:58px}
+ .seo-process-list li{grid-template-columns:1fr;gap:7px;padding:20px}
+ .seo-question-grid{grid-template-columns:1fr}
+ .seo-guide-note{padding:22px}
+}
