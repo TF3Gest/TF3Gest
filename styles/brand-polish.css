@@ -1,0 +1,98 @@
+/* TF3Gest — brand wordmark + spacing/migration polish */
+
+/* Inline TF3Gest wordmark: approved lettering, without the wave symbol. */
+.tf3-wordmark{
+  display:inline-block;
+  width:auto;
+  height:1.05em;
+  max-width:none;
+  margin:0 .06em;
+  vertical-align:-.14em;
+  object-fit:contain;
+}
+h1 .tf3-wordmark,h2 .tf3-wordmark,h3 .tf3-wordmark{height:.98em;vertical-align:-.11em}
+a .tf3-wordmark,button .tf3-wordmark,.nw-btn .tf3-wordmark{height:.92em;vertical-align:-.12em;margin-inline:.04em}
+small .tf3-wordmark{height:1em}
+
+/* The fixed header already reserves its own space. Avoid a second oversized blank band. */
+#inicio{padding-top:82px!important}
+.nw-hero{padding-top:68px!important;padding-bottom:82px!important}
+.nw-contact-page main{padding-top:82px!important}
+.nw-contact-hero{padding-top:50px!important;padding-bottom:62px!important}
+
+/* Secondary / legal pages: tighten the first viewport without crowding the header. */
+.nw-page-hero{padding-top:58px!important;padding-bottom:66px!important}
+.legal-hero{padding-top:42px!important;padding-bottom:62px!important}
+
+/* Migration: the old dark-text/light-background override made several items almost invisible. */
+.nw-migration-section{
+  padding:84px 0!important;
+  background:linear-gradient(180deg,#f5f9ff 0%,#ffffff 100%)!important;
+  color:#06172f!important;
+}
+.nw-migration-panel{
+  display:block!important;
+  padding:clamp(30px,4vw,52px)!important;
+  border:1px solid #d6e5f4!important;
+  border-radius:24px!important;
+  background:linear-gradient(145deg,#ffffff 0%,#f7fbff 100%)!important;
+  box-shadow:0 18px 48px rgba(0,26,61,.08)!important;
+}
+.nw-migration-panel>div{max-width:none!important}
+.nw-migration-panel h2{max-width:820px!important;color:#001a3d!important}
+.nw-migration-panel p{max-width:820px!important;color:#5f6f85!important}
+.nw-migration-panel ul{
+  max-width:900px!important;
+  margin:28px 0 18px!important;
+  padding:0!important;
+}
+.nw-migration-panel li{
+  align-items:flex-start!important;
+  padding:13px 15px!important;
+  border:1px solid #dfebf7!important;
+  border-radius:13px!important;
+  background:#fff!important;
+  color:#243750!important;
+  font-weight:700!important;
+}
+.nw-migration-panel li i{margin-top:3px!important;color:#087bf0!important}
+.nw-migration-panel small{display:block;max-width:820px;color:#718097!important;line-height:1.6}
+.nw-migration-steps{
+  grid-template-columns:repeat(3,minmax(0,1fr))!important;
+  max-width:1000px!important;
+  gap:14px!important;
+  margin-top:30px!important;
+}
+.nw-migration-steps span{
+  position:relative;
+  min-height:108px;
+  padding:20px 18px!important;
+  border:1px solid #dce9f6!important;
+  border-radius:16px!important;
+  background:#fff!important;
+  color:#42556e!important;
+  box-shadow:0 8px 22px rgba(0,26,61,.045)!important;
+  font-size:.9rem!important;
+}
+.nw-migration-steps strong{
+  display:inline-grid;
+  place-items:center;
+  width:27px;height:27px;
+  margin-right:6px;
+  border-radius:50%;
+  background:#eaf4ff;
+  color:#087bf0!important;
+}
+
+@media(max-width:760px){
+  #inicio{padding-top:74px!important}
+  .nw-hero{padding-top:46px!important;padding-bottom:62px!important}
+  .nw-contact-page main{padding-top:74px!important}
+  .nw-contact-hero{padding-top:38px!important;padding-bottom:50px!important}
+  .nw-page-hero{padding-top:46px!important;padding-bottom:54px!important}
+  .legal-hero{padding-top:34px!important;padding-bottom:50px!important}
+  .nw-migration-section{padding:62px 0!important}
+  .nw-migration-panel{padding:26px 20px!important;border-radius:18px!important}
+  .nw-migration-panel ul,.nw-migration-steps{grid-template-columns:1fr!important}
+  .nw-migration-steps span{min-height:0}
+}
