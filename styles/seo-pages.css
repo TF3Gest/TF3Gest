@@ -23,3 +23,14 @@
  .seo-info-card{padding:24px}
  .seo-page-cta__box{padding:30px 22px}
 }
+
+.seo-breadcrumb{padding:108px 0 0;background:#fff}
+.seo-breadcrumb .nw-shell{display:flex;align-items:center;gap:9px;font-size:.9rem;color:#748197}
+.seo-breadcrumb a{color:#52627a;text-decoration:none;font-weight:650}
+.seo-breadcrumb a:hover{text-decoration:underline}
+.seo-breadcrumb [aria-current="page"]{color:#748197}
+.seo-breadcrumb + .seo-page-hero{padding-top:42px}
+@media(max-width:760px){
+ .seo-breadcrumb{padding-top:92px}
+ .seo-breadcrumb + .seo-page-hero{padding-top:32px}
+}
